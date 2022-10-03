@@ -53,7 +53,9 @@
       }
     ],
     "@typescript-eslint/consistent-type-exports": ["error", { "fixMixedExportsWithInlineTypeSpecifier": false }],
-    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }]
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off"
   },
   "settings": {
     "import/parsers": {
