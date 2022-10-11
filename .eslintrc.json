@@ -15,7 +15,7 @@
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
-    "airbnb/whitespace",
+    // "airbnb/whitespace",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -54,6 +54,8 @@
     ],
     "@typescript-eslint/consistent-type-exports": ["error", { "fixMixedExportsWithInlineTypeSpecifier": false }],
     "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+    "import/prefer-default-export": "off",
+    // To use styled component in functinal component
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off"
   },
