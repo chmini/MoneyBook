@@ -25,6 +25,8 @@
     "prettier"
   ],
   "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/order": [
       "error",
       {
@@ -42,6 +44,7 @@
         "warnOnUnassignedImports": true
       }
     ],
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
     "react/jsx-sort-props": [
       "error",
@@ -54,10 +57,8 @@
     ],
     "@typescript-eslint/consistent-type-exports": ["error", { "fixMixedExportsWithInlineTypeSpecifier": false }],
     "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
-    "import/prefer-default-export": "off",
-    // To use styled component in functinal component
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": "off"
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-use-before-define": "off"
   },
   "settings": {
     "import/parsers": {
