@@ -1,12 +1,14 @@
 import { useState } from "react";
 
+import { Avatar } from "@components/shared/Avatar";
+
 import type { Book, Review } from "../mocks/types";
 
 interface Props {
   book: Book;
 }
 
-export default function Home({ book }: Props) {
+const Home = ({ book }: Props) => {
   const [reviews, setReviews] = useState<Review[] | null>(null);
 
   const handleGetReviews = () => {
@@ -19,6 +21,7 @@ export default function Home({ book }: Props) {
 
   return (
     <div>
+      <Avatar alt="random image" shape="circle" size={80} src="https://picsum.photos/200" />
       <img alt={book.title} src={book.imageUrl} width="250" />
       <h1>{book.title}</h1>
       <p>{book.description}</p>
@@ -37,7 +40,9 @@ export default function Home({ book }: Props) {
       )}
     </div>
   );
-}
+};
+
+export default Home;
 
 export async function getServerSideProps() {
   // Server-side requests are mocked by `mocks/server.ts`.

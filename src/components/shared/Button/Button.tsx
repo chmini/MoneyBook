@@ -6,9 +6,7 @@ interface Props {
   children: string;
 }
 
-function Button({ children }: Props) {
-  return <SButton type="button">{children}</SButton>;
-}
+const Button = ({ children }: Props) => <SButton type="button">{children}</SButton>;
 
 export default Button;
 

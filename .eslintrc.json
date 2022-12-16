@@ -36,6 +36,11 @@
             "pattern": "react",
             "group": "external",
             "position": "before"
+          },
+          {
+            "pattern": "@components/shared/**",
+            "group": "internal",
+            "position": "before"
           }
         ],
         "pathGroupsExcludedImportTypes": ["react"],
@@ -45,6 +50,7 @@
       }
     ],
     "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
     "react/jsx-sort-props": [
       "error",
