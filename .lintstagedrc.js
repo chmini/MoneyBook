@@ -1,12 +1,14 @@
-const path = require("path");
+import path from "path";
 
-const buildEslintCommand = (filenames) =>
-  `next lint --cache --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(" --file ")}`;
-
-const buildTypeCheckCommand = () => "tsc --noEmit";
-
-module.exports = {
-  "*": "prettier --write --ignore-unknown",
-  "*.{js,jsx,ts,tsx}": buildEslintCommand,
-  "*.{ts,tsx}": buildTypeCheckCommand,
+const config = {
+  "**/*.{js,cjs,mjs,ts,tsx,md}": "npx prettier --write",
+  "apps/web/**/*.{ts,tsx}": [
+    (filenames) =>
+      `yarn workspace @moneybook/web lint --cache --fix --file ${filenames
+        .map((f) => path.relative(process.cwd(), f))
+        .join(" --file ")}`,
+    () => "yarn workspace @moneybook/web typecheck",
+  ],
 };
+
+export default config;
