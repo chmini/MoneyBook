@@ -9,7 +9,7 @@ module.exports = {
     ecmaFeatures: { jsx: true },
     ecmaVersion: "latest",
     tsconfigRootDir: __dirname,
-    project: ["tsconfig.eslint.json", "packages/**/tsconfig.json"],
+    project: ["tsconfig.eslint.json", "apps/**/tsconfig.json"],
   },
   plugins: ["@typescript-eslint", "import", "react", "react-hooks"],
   extends: [
@@ -70,8 +70,19 @@ module.exports = {
     "import/resolver": {
       typescript: {
         alwaysTryTypes: true,
-        project: __dirname,
       },
     },
   },
+  overrides: [
+    {
+      files: ["apps/**/*.{ts,tsx}"],
+      settings: {
+        "import/resolver": {
+          typescript: {
+            project: "apps/**/tsconfig.json",
+          },
+        },
+      },
+    },
+  ],
 };

@@ -2,7 +2,5 @@
   "name": "@papad/core",
   "version": "1.0.0",
   "license": "MIT",
-  "scripts": {
-    "tsc": "tsc --noEmit"
-  }
+  "main": "src/index.ts"
 }

@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Button } from "@papad/core";
+
 import { Avatar } from "@components/Avatar";
 
 import type { Book, Review } from "../mocks/types";
@@ -22,6 +24,7 @@ const Home = ({ book }: Props) => {
   return (
     <div>
       <Avatar alt="" shape="circle" size={80} src="https://picsum.photos/200" />
+      <Button />
       <img alt={book.title} src={book.imageUrl} width="250" />
       <h1>{book.title}</h1>
       <p>{book.description}</p>

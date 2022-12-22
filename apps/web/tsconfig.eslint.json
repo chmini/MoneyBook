@@ -1,4 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "include": ["src", ".eslintrc.cjs", "next-env.d.ts", "**/*.js"],
-}

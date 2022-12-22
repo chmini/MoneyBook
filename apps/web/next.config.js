@@ -7,6 +7,9 @@ const nextConfig = {
   images: {
     domains: ["picsum.photos"],
   },
+  experimental: {
+    transpilePackages: ["@papad/core"],
+  },
 };
 
 export default nextConfig;
