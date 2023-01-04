@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev:storybook": "yarn workspace @papad/core storybook",
     "dev:moneybook": "yarn workspace @moneybook/web dev",
     "prepare": "husky install"
   },
